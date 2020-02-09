@@ -1,0 +1,53 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 微軟正黑體;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#banner {
+  background-size: cover;
+  background-image: url(./IMG/banner.jpg);
+  height: 100vh;
+  margin-top: -100px;
+}
+
+#logo {
+  border-radius: 50px;
+}
+
+nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 100px auto;
+      grid-template-columns: auto 100px auto;
+  text-align: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+nav img {
+  width: 80px;
+}
+/*# sourceMappingURL=style.css.map */

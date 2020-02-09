@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 微軟正黑體;
+    box-sizing: border-box;
+}
+#banner{
+    background-size: cover;
+    background-image: url(./IMG/banner.jpg);
+
+    height: 100vh;
+    margin-top: -100px;
+}
+
+#logo{
+    border-radius:50px;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: auto 100px auto;
+    text-align: center;
+    position: sticky;
+    top:0;
+    height: 100px;
+    // 使用格線可讓內容垂直對齊
+    align-items: center;
+
+
+ul {
+    list-style: none;
+
+    li{
+        display: inline-block;
+        a{
+           text-decoration: none;
+           color: white;
+           padding: 10px; 
+        }
+    }
+}
+img {
+    width: 80px;
+}
+}
