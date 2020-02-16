@@ -5,14 +5,7 @@
     box-sizing: border-box;
 }
 
-// 橫幅
-#banner {
-    height: 100vh;
-    background-image: url(./img/banner.jpg);
-    background-size: cover;
-    margin-top: -100px;
-}
-
+//導覽列
 nav {
     display: grid;
     grid-template-columns: auto 80px auto;
@@ -53,4 +46,38 @@ nav {
             transform: scaleX(-1.1) scaleY(1.1);
         }
     }
+}
+
+// 橫幅
+#banner {
+    height: 100vh;
+    background-image: url(./img/banner.jpg);
+    background-size: cover;
+    margin-top: -100px;
+    display: grid;
+    align-items: center;
+}
+
+div {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    padding: 30px;
+    background-color:rgba($color: #000, $alpha: 0.3);
+h1{
+    font-size: 50px;
+}
+h2{
+    font-size: 25px;
+}
+}
+
+
+//內容
+.conten {
+max-width: 1800px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+margin: 0 auto;
 }
