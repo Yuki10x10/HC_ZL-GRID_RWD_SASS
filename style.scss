@@ -204,7 +204,7 @@ nav {
         cursor:pointer;
         
         a.current {
-            background-color: $text-color-red;
+            background-color: $text-color-black;
             display: inline-block;
             width: 100%;
             padding: 10px 20px;
@@ -219,37 +219,71 @@ nav {
              // 啟動：點選元素時
             &:active #menu-box {
                 right:0;
+            }
             &:hover #menu-box {
                 right:0;
             }    
-        }
 
-    #menu-box {
-        right:-500px;
-        width: 500px;
-        position: absolute;
-        height: 100vh;
-        background: #fff;
-        top:0;
-        transition: 0.5s;
-
-        ul{
-            list-style: none;
-            li {
-                padding: 30px;
-                a {
-                    color: $text-color-black;
-                    text-decoration: none;
-                    font-size: 36px;
+        #menu-box {
+            position: absolute;
+            right: -500px;
+            top: 0;
+            width: 500px;
+            height: 100vh;
+            background-color: #fff;
+            transition: 0.1s;
+    
+            ul {
+                list-style: none;
+                li {
+                    padding: 30px;
+    
+                    a {
+                        color: $text-color-black;
+                        text-decoration: none;
+                        font-size: 36px;
+                    }
                 }
             }
         }
-        
     }
-}
 
     // 手機
 @media screen and (max-width: 768px) {
+
+    nav {
+        grid-template-columns: auto;
+
+        ul {
+            display: none;
+        }
+    }
+
+    #menu {
+        display: block;
+    }
+    #content-1, #content-2, #content-3 {
+        // "" 一列
+        // "" "" 兩列
+        grid-template-areas: "text-area" "pic";
+        grid-template-columns: 1fr;
+
+        .pic {
+            text-align: center;
+            width: 50%;
+        }
+
+        .text-area {
+            padding: 0px;
+        }
+    }
+
+    #icon {
+        div {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0px;
+        }
+    }
 
 }
 
@@ -267,9 +301,30 @@ nav {
     #menu {
         display: block;
     }
-}
+    #content-1, #content-2, #content-3 {
+        // "" 一列
+        // "" "" 兩列
+        grid-template-areas: "text-area" "pic";
+        grid-template-columns: 1fr;
+
+        .pic {
+            text-align: center;
+        }
+
+        .text-area {
+            padding: 0 100px;
+        }
+    }
+
+    #icon {
+        div {
+            grid-template-columns: repeat(4, 1fr);
+            padding: 50px;
+        }
+    }
+} 
 
 // 電腦
 @media screen and (min-width: 1025px) {
-
+  
 }
