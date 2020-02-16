@@ -5,6 +5,33 @@
   font-family: 微軟正黑體;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: #fff;
+}
+
+#banner {
+  height: 100vh;
+  background-image: url(./img/banner.jpg);
+  background-size: cover;
+  margin-top: -100px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#banner div {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#banner div h1 {
+  font-size: 72px;
+}
+
+#banner div h2 {
+  padding: 10px 0;
 }
 
 nav {
@@ -37,12 +64,13 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #fff;
-  padding: 10px;
+  padding: 15px;
+  font-weight: 900;
 }
 
 nav ul li:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 nav img {
@@ -54,15 +82,33 @@ nav img {
 }
 
 nav img:hover {
-  -webkit-transform: scaleX(-1.1) scaleY(1.1);
-          transform: scaleX(-1.1) scaleY(1.1);
+  -webkit-transform: scaleX(-1.2) scaleY(1.2);
+          transform: scaleX(-1.2) scaleY(1.2);
 }
 
-#banner {
-  height: 100vh;
-  background-image: url(./img/banner.jpg);
-  background-size: cover;
-  margin-top: -100px;
+.content {
+  max-width: 1200px;
+  display: -ms-grid;
+  display: grid;
+  margin: 0 auto;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.content * {
+  color: #333;
+}
+
+.content .pic {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: pic;
+}
+
+.content .text-area {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: text-area;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -70,29 +116,35 @@ nav img:hover {
           align-items: center;
 }
 
-div {
-  width: 800px;
-  margin: 0 auto;
-  text-align: center;
+.content .text-area h2 {
+  padding: 20px 0;
+}
+
+.content .text-area p {
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.content .text-area a {
+  border: 1px solid #333;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 30px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  width: 130px;
+}
+
+.content .text-area a:hover {
+  background-color: #333;
   color: #fff;
-  padding: 30px;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 
-div h1 {
-  font-size: 50px;
+#content-1, #content-3 {
+      grid-template-areas: 'pic text-area';
 }
 
-div h2 {
-  font-size: 25px;
-}
-
-.conten {
-  max-width: 1800px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  margin: 0 auto;
+#content-2 {
+      grid-template-areas: 'text-area pic';
 }
 /*# sourceMappingURL=style.css.map */
