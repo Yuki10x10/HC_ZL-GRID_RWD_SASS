@@ -147,4 +147,21 @@ nav img:hover {
 #content-2 {
       grid-template-areas: 'text-area pic';
 }
+
+#icon {
+  background: #333;
+}
+
+#icon * {
+  color: #333;
+}
+
+#icon div {
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  max-width: 1200px;
+  -ms-grid-columns: 6,1fr;
+      grid-template-columns: 6,1fr;
+}
 /*# sourceMappingURL=style.css.map */

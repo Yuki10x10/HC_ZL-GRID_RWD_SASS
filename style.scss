@@ -131,3 +131,35 @@ nav {
 #content-2 {
     grid-template-areas: 'text-area pic';
 }
+
+// 圖示
+#icon {
+    background-color: $bg-color;
+
+    * {
+        color: $text-color-black;
+    }
+
+    div {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        padding: 20px 0;
+        
+        div {
+            display: block;
+            text-align: center;
+
+            img {
+                display: block;
+                width: 64px;
+            }
+            span {
+                display: block;
+                padding: 10px 0;
+                font-size: 12px;
+            }
+        }
+    }
+}
