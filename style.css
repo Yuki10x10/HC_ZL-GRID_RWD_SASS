@@ -103,6 +103,7 @@ nav img:hover {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: pic;
+  text-align: center;
 }
 
 .content .text-area {
@@ -149,19 +150,141 @@ nav img:hover {
 }
 
 #icon {
-  background: #333;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 #icon * {
   color: #333;
 }
 
+#icon h1 {
+  font-size: 72px;
+  text-align: center;
+  padding: 30px 0 10px;
+}
+
 #icon div {
+  max-width: 1200px;
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  max-width: 1200px;
-  -ms-grid-columns: 6,1fr;
-      grid-template-columns: 6,1fr;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  padding: 20px 0;
+}
+
+#icon div div {
+  display: block;
+  text-align: center;
+}
+
+#icon div div img {
+  display: block;
+  width: 64px;
+}
+
+#icon div div span {
+  display: block;
+  padding: 10px 0;
+  font-size: 12px;
+}
+
+#icon div div:hover img {
+  -webkit-filter: invert(91%) sepia(2%) saturate(3814%) hue-rotate(297deg) brightness(92%) contrast(102%);
+          filter: invert(91%) sepia(2%) saturate(3814%) hue-rotate(297deg) brightness(92%) contrast(102%);
+}
+
+#icon div div:hover span {
+  color: #BF907E;
+}
+
+footer {
+  background: #BF907E;
+  text-align: center;
+}
+
+footer img {
+  width: 100px;
+  -webkit-transform: scale(-1);
+          transform: scale(-1);
+}
+
+footer p {
+  font-size: 10px;
+  padding: 20 0px;
+}
+
+#menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#menu img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+#menu:active #menu-box {
+  right: 0;
+}
+
+#menu:active #menu-box:hover #menu-box {
+  right: 0;
+}
+
+#menu #menu-box {
+  right: -500px;
+  width: 300px;
+  position: absolute;
+  height: 100vh;
+  background: #fff;
+  top: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#menu #menu-box ul {
+  list-style: none;
+}
+
+#menu #menu-box ul li {
+  padding: 30px;
+}
+
+#menu #menu-box ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 36px;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  ul {
+    display: none;
+  }
+  #menu {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .container {
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .container {
+    -ms-grid-columns: (auto)[4];
+        grid-template-columns: repeat(4, auto);
+  }
 }
 /*# sourceMappingURL=style.css.map */

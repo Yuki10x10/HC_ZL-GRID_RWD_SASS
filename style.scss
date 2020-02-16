@@ -92,6 +92,7 @@ nav {
     .pic {
         // 格線區域名稱：自行命名
         grid-area: pic;
+        text-align: center;
     }
 
     .text-area {
@@ -134,10 +135,17 @@ nav {
 
 // 圖示
 #icon {
-    background-color: $bg-color;
+
+    background: rgba(0, 0, 0, 0.1);
 
     * {
         color: $text-color-black;
+    }
+
+    h1 {
+        font-size: 72px;
+        text-align: center;
+        padding: 30px 0 10px;
     }
 
     div {
@@ -146,7 +154,7 @@ nav {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         padding: 20px 0;
-        
+
         div {
             display: block;
             text-align: center;
@@ -160,6 +168,114 @@ nav {
                 padding: 10px 0;
                 font-size: 12px;
             }
+            &:hover img {
+            filter: invert(91%) sepia(2%) saturate(3814%) hue-rotate(297deg) brightness(92%) contrast(102%);
+            }
+            &:hover span {
+                color: #BF907E;
+            }
         }
     }
 }
+
+    //頁尾
+    footer {
+        background: #BF907E;
+        text-align: center;
+
+        img {
+            width: 100px;
+            transform: scale(-1);
+        }
+        p {
+            font-size: 10px;
+            padding: 20 0px;
+        }
+    }
+
+    //菜單
+    #menu {
+        display: none;
+        position: fixed;
+        top:0;
+        right:0;
+        padding: 10px;
+        cursor:pointer;
+        
+        a.current {
+            background-color: $text-color-red;
+            display: inline-block;
+            width: 100%;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-align: center;
+            color: #fff !important;
+        }
+
+        img {
+              filter: invert(1);
+            }
+             // 啟動：點選元素時
+            &:active #menu-box {
+                right:0;
+            &:hover #menu-box {
+                right:0;
+            }    
+        }
+
+    #menu-box {
+        right:-500px;
+        width: 500px;
+        position: absolute;
+        height: 100vh;
+        background: #fff;
+        top:0;
+        transition: 0.5s;
+
+        ul{
+            list-style: none;
+            li {
+                padding: 30px;
+                a {
+                    color: $text-color-black;
+                    text-decoration: none;
+                    font-size: 36px;
+                }
+            }
+        }
+        
+    }
+}
+
+    //手機
+    @media screen and (max-width: 768px) {
+        
+          nav {
+           grid-template-columns: auto; 
+      }
+      ul{
+          display: none;
+      }
+      #menu{
+          display: block;
+          
+      }
+        }
+        //平板
+      @media screen and (min-width: 769px) {
+        
+        nav {
+            grid-template-columns: auto;
+            ul {
+                display: none;
+            }
+        }
+          #menu {
+              display: block;
+          }
+        }
+        //電腦
+      @media screen and (min-width: 1025px) {
+        
+        
+         }
