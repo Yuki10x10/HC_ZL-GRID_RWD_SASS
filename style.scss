@@ -186,6 +186,7 @@ nav {
         img {
             width: 100px;
             transform: scale(-1);
+            text-align: center;
         }
         p {
             font-size: 10px;
@@ -247,35 +248,28 @@ nav {
     }
 }
 
-    //手機
-    @media screen and (max-width: 768px) {
-        
-          nav {
-           grid-template-columns: auto; 
-      }
-      ul{
-          display: none;
-      }
-      #menu{
-          display: block;
-          
-      }
+    // 手機
+@media screen and (max-width: 768px) {
+
+}
+
+// 平板
+@media screen and (min-width: 769px) {
+
+    nav {
+        grid-template-columns: auto;
+
+        ul {
+            display: none;
         }
-        //平板
-      @media screen and (min-width: 769px) {
-        
-        nav {
-            grid-template-columns: auto;
-            ul {
-                display: none;
-            }
-        }
-          #menu {
-              display: block;
-          }
-        }
-        //電腦
-      @media screen and (min-width: 1025px) {
-        
-        
-         }
+    }
+
+    #menu {
+        display: block;
+    }
+}
+
+// 電腦
+@media screen and (min-width: 1025px) {
+
+}
